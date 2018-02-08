@@ -1,0 +1,8 @@
+rootProject.name = 'spring-cloud-study'
+include 'eureka-server'
+include 'hello-service'
+include 'ribbon-consumer'
+include 'hystrix-dashboard'
+include 'turbine'
+include 'feign-consumer'
+

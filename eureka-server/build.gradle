@@ -1,0 +1,8 @@
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+    //工具
+    compile 'commons-io:commons-io'
+    compile 'commons-lang:commons-lang'
+    compile 'commons-collections:commons-collections'
+    compile 'commons-beanutils:commons-beanutils'
+}
