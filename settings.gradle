@@ -7,4 +7,5 @@ include 'turbine'
 include 'feign-consumer'
 include 'core'
 include 'hello-service-api'
+include 'api-gateway'
 

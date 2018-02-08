@@ -1,0 +1,27 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: api-gateway
+
+#传统的路由：映射url
+#zuul:
+#  routes:
+#    api-a-url:
+#      path: /api-a-url/**
+#      url: http://localhost:8080/
+
+#面向服务的路由：映射服务
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      service-id: HELLO-SERVICE
+    api-b:
+      path: /api-b/**
+      service-id: FEIGN-CONSUMER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+
