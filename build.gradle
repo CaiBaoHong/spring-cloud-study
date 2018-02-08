@@ -13,12 +13,14 @@ buildscript {
     }
 }
 
+//所有模块，含spring-cloud-study
 allprojects{
     group 'com.abc'
     version '1.0'
 }
 
-subprojects{
+//所有子模块，不含spring-cloud-study
+subprojects {
 
     //应用插件
     apply plugin: 'java'
@@ -30,6 +32,11 @@ subprojects{
     compileJava.options.encoding = "UTF-8"
     compileTestJava.options.encoding = "UTF-8"
 
+    //设置maven阿里云镜像
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+    }
+
     //设置后依赖不用写版本号
     dependencyManagement {
         imports {
@@ -39,14 +46,11 @@ subprojects{
         }
     }
 
-    //设置maven阿里云镜像
-    repositories {
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
-    }
-
-    //子模块公共的依赖
+    //子模块公共的依赖，不包括spring-cloud-study模块
     dependencies {
-
+        if(project.name != 'core') {
+            compile project(':core')
+        }
     }
 
 }

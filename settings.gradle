@@ -5,4 +5,6 @@ include 'ribbon-consumer'
 include 'hystrix-dashboard'
 include 'turbine'
 include 'feign-consumer'
+include 'core'
+include 'hello-service-api'
 
