@@ -14,8 +14,16 @@ spring:
       profile: prod
       label: master
       fail-fast: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: 123456
 # 配置注册中心的地址，以获取配置服务
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka
+management:
+  security:
+    enabled: false
