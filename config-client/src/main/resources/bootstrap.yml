@@ -5,6 +5,17 @@ spring:
     name: shop
   cloud:
     config:
-      uri: http://localhost:7001/
+      # 传统方式：指向配置服务器
+      # uri: http://localhost:7001/
+      # 服务化方式：指向注册中心的配置服务
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
       profile: prod
       label: master
+      fail-fast: true
+# 配置注册中心的地址，以获取配置服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka

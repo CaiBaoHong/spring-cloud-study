@@ -10,4 +10,5 @@ include 'hello-service-api'
 include 'api-gateway'
 include 'config-server'
 include 'config-client'
+include 'rabbitmq-hello'
 
