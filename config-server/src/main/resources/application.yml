@@ -1,0 +1,17 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/CaiBaoHong/spring-cloud-config-repo.git
+          search-paths: spring_cloud_study
+#eureka:
+#  instance:
+#    instance-id: ${spring.application.name}:${random.int(1000,9999)}
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:1111/eureka
