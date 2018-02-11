@@ -11,4 +11,5 @@ include 'api-gateway'
 include 'config-server'
 include 'config-client'
 include 'rabbitmq-hello'
+include 'stream-hello'
 
